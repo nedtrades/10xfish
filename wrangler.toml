@@ -1,0 +1,18 @@
+"$schema" = "./node_modules/wrangler/config-schema.json"
+# workers.dev label. This project does not set a route or a custom domain.
+name = "10xfish"
+main = "src/index.ts"
+compatibility_date = "2026-11-01"
+compatibility_flags = [ "nodejs_compat" ]
+upload_source_maps = true
+
+[observability]
+enabled = true
+
+  [observability.logs]
+  enabled = true
+  head_sampling_rate = 1
+
+  [observability.traces]
+  enabled = true
+  head_sampling_rate = 0.01
